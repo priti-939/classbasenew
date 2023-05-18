@@ -18,7 +18,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <h1>Header</h1>
+      <h1>Header component</h1>
     </div>
   );
 }
