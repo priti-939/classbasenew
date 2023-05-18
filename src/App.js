@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import Demo from './counter';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Profile from './Profile';
+import Header from './Header';
 
 function App() {
   return (
@@ -18,7 +22,17 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <h1>Header component</h1>
+
+      <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Demo />}>
+          <Route path="profile" element={<Profile />} />
+          {/* <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
